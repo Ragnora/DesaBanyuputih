@@ -1,0 +1,1319 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Hero */
+
+.hero {
+    overflow: hidden;
+    background-image: url("../asset/HomepageBG.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 115vh;
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+}
+
+
+.logo > h1 {
+    font-family: "Palanquin Dark", sans-serif;
+    font-size: 2rem;
+    color: white;
+    line-height: 2rem;
+}
+
+.logo > h1 > span {
+    font-size: 3rem;
+}
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    gap: 4rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: white;
+    font-family: "Orienta", sans-serif;
+    font-size: 1.15rem;
+}
+
+.nav-item:hover {
+    color: #C3941B;
+    text-decoration: underline;
+}
+
+.current {
+    color: #C3941B;
+    text-decoration: underline #C3941B;
+}
+
+.dropbtn {
+    display: flex;
+    position: relative;
+}
+
+.dropbtn > svg {
+    position: absolute;
+    top: 20%;
+    left: 105%;
+}
+
+.dropdown {
+    margin-right: 0.25rem;
+}
+
+.dropdown-content{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    padding: 1rem 0;
+    border-radius: 5px;
+    border-top: 5px solid black;
+}
+
+.sub-item {
+    text-decoration: none;
+    color: black;
+    font-family: "Orienta", sans-serif;
+    font-size: 1.15rem;
+    padding: 0.5rem 1rem;
+}
+
+.sub-item:hover {
+    color: #C3941B;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+}
+
+/* Hamburger */
+.container {
+    display: none;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/* Side Navbar */
+.side {
+    position: absolute;
+    z-index: 10;
+    top: 8%;
+    right: 5%;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    padding: 1.5rem 0;
+    border-radius: 10px;
+    border-top: 6px solid black;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.side-show {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.side-logo > h1 {
+    font-family: "Palanquin Dark", sans-serif;
+    font-size: 2rem;
+    color: black;
+    line-height: 2rem;
+    padding: 0 0 1rem 2rem;
+    text-decoration: underline #C3941B;
+}
+
+.side-logo > h1 > span {
+    font-size: 3rem;
+}
+
+.side-nav-item {
+    font-family: "Orienta", sans-serif;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 12rem 0.5rem 2rem;
+}
+
+.side-nav-item:active {
+    color: #C3941B;
+}
+
+.side-nav-item:focus {
+    color: #C3941B;
+}
+
+.side-dropbtn {
+    display: flex;
+    position: relative;
+}
+
+.side-dropbtn > svg {
+    position: absolute;
+    left: 85%;
+}
+
+.side-dropdown-content {
+    display: none;
+    flex-direction: column;
+    padding: 0.5rem 0 0.5rem 3rem;
+    background-color: whitesmoke;
+}
+
+.side-sub-show {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-sub-item {
+    font-family: "Orienta", sans-serif;
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 0;
+}
+
+.side-sub-item:active {
+    color: #C3941B;
+}
+
+.side-sub-item:focus {
+    color: #C3941B;
+}
+
+/* Main */
+
+.bg-home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    place-items: center;
+    padding: 0 5rem;
+}
+
+.text {
+    width: 100%;
+    padding: 0 3rem;
+}
+
+.text h1 {
+    font-family: "Passion One", sans-serif;
+    color: white;
+    font-size: 4.25rem;
+}
+
+.text p {
+    padding-top: 1rem;
+    font-family: Orienta;
+    color: white;
+    font-size: 1.15rem;
+}
+
+.exp-btn {
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.exp-btn > a {
+    text-decoration: none;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    background: grey;
+    color: white;
+    border: solid white 3px;
+    border-radius: 50px;
+    padding: 0.5rem 2.5rem;
+    font-size: 1rem;
+}
+
+.exp-btn a:hover:not(.active) {
+    background-color: white;
+    color: black;
+}
+
+.exp-btn a.active{
+    background-color: black;
+}
+
+.image {
+    display: flex;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    place-content: center;
+    gap: 1rem;
+}
+
+.image img {
+    width: 40%;
+}
+
+/* Profile */
+
+.profile {
+    position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    margin-top: -6%;
+    z-index: 10;
+}
+
+.video-container > iframe {
+    width: 80vw;
+    height: 45vw;
+    border-radius: 20px;
+}
+
+.profile > h3 {
+    font-family: "Oxanium", sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: underline;
+    line-height: 6rem;
+}
+
+.detail-bondowoso{
+    padding: 3rem 0;
+}
+
+.detail-banyuputih{
+    padding: 0 0 3rem 0;
+}
+
+.detail-bondowoso > img, .detail-banyuputih > img {
+    width: 65%;
+}
+
+.detail-bondowoso > img {
+    float: left;
+}
+
+.detail-banyuputih > img {
+    float: right;
+}
+
+.line > img {
+    width: 100.05%;
+    padding: 2rem 0 0 0;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 0 3rem 0;
+    font-family: "Orienta", sans-serif;
+}
+
+.footer-logo > h1 {
+    font-family: "Palanquin Dark", sans-serif;
+    font-size: 3rem;
+    color: #2E482F;
+    line-height: 3rem;
+}
+
+.footer-logo > h1 > span {
+    font-size: 4.5rem;
+}
+
+.footer-kiri {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-kiri p {
+    font-size: 1.35rem;
+    color: #1A4D2E;
+}
+
+.footer-center {
+    background-color: #1A4D2E;
+    color: #1A4D2E;
+    height: 17rem;
+    width: 0.15rem;
+}
+
+.footer-kanan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.tautan-penting > h3, .tautan-langsung > h3 {
+    font-size: 1.75rem;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.link-footer {
+    color: #1A4D2E;
+    text-decoration: none;
+    font-size: 1.35rem;
+}
+
+.link-footer:hover {
+    color: #C3941B;
+    text-decoration: underline;
+}
+
+.link-footer:active {
+    color: #C3941B;
+    text-decoration: underline;
+}
+
+.link-footer:focus {
+    color: #C3941B;
+    text-decoration: underline;
+}
+
+.footer-current {
+    color: #C3941B;
+    text-decoration: underline;
+}
+
+/* License */
+
+.license {
+    background-color: #1A4D2E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.license p {
+    font-family: "Orienta", sans-serif;
+    color: white;
+}
+
+
+/* Max Width 1024px */
+
+@media screen and (max-width: 1024px) {
+
+    /* Navbar */
+
+    .navbar {
+        gap: 3rem;
+    }
+
+    /* Main */
+
+    .box {
+        padding: 0 3rem;
+    }
+
+    .text h1 {
+        font-size: 2.75rem;
+    }
+
+    .text p {
+        padding-top: 1rem;
+        font-size: 1rem;
+    }
+
+    .exp-btn > a {
+        border-radius: 50px;
+        padding: 0.5rem 2.5rem;
+        font-size: 0.9rem;
+    }
+
+    .image img {
+        width: 45%;
+    }
+
+    /* Profile */
+
+    .profile > h3 {
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+
+    .detail-bondowoso{
+        padding: 2rem 0;
+    }
+    
+    .detail-banyuputih{
+        padding: 0 0 2rem 0;
+    }
+    
+    .detail-bondowoso > img, .detail-banyuputih > img {
+        width: 80%;
+    }
+
+    .line > img {
+        width: 100.2%;
+        padding: 1.5rem 0 0 0;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 2rem 0;
+    }
+
+    .footer-logo > h1 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .footer-logo > h1 > span {
+        font-size: 4rem;
+    }
+
+    .footer-kiri {
+        gap: 1.5rem;
+    }
+
+    .footer-kiri p {
+        font-size: 1.15rem;
+    }
+
+    .footer-center {
+        height: 16rem;
+        width: 0.15rem;
+    }
+
+    .footer-kanan {
+        gap: 2rem;
+    }
+
+    .tautan-penting > h3, .tautan-langsung > h3 {
+        font-size: 1.5rem;
+    }
+
+    .link {
+        gap: 0.5rem;
+        padding-top: 0.5rem;
+    }
+
+    .link-footer {
+        font-size: 1.15rem;
+    }
+}
+
+
+/* Max Width 992px */
+
+@media screen and (max-width: 992px) {
+
+    /* Navbar */
+
+    .logo > h1 {
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+    }
+    
+    .logo > h1 > span {
+        font-size: 2.75rem;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    /* Hamburger */
+
+    .container {
+        display: inline-block;
+    }
+
+    /* Main */
+
+    .box {
+        padding: 0 1.5rem;
+    }
+
+    .text {
+        padding: 0 1.5rem;
+    }
+
+    .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .text p {
+        padding-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .exp-btn > a {
+        border-radius: 50px;
+        padding: 0.5rem 2.5rem;
+        font-size: 0.8rem;
+    }
+
+    .image {
+        gap: 0.5rem;
+    }
+
+    .image img {
+        width: 40%;
+    }
+
+    .line > img {
+        width: 100.2%;
+        padding: 1.5rem 0 0 0;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 2rem 0;
+    }
+    
+    .footer-logo > h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    
+    .footer-logo > h1 > span {
+        font-size: 3.5rem;
+    }
+    
+    .footer-kiri {
+        gap: 1rem;
+    }
+    
+    .footer-kiri p {
+        font-size: 1rem;
+    }
+    
+    .footer-center {
+        height: 14rem;
+        width: 0.15rem;
+    }
+    
+    .footer-kanan {
+        gap: 1.5rem;
+    }
+    
+    .tautan-penting > h3, .tautan-langsung > h3 {
+        font-size: 1.4rem;
+    }
+    
+    .link {
+        gap: 0.4rem;
+        padding-top: 0.75rem;
+    }
+    
+    .link-footer {
+        font-size: 1rem;
+    }
+
+    .footer-current {
+        color: #C3941B;
+        text-decoration: underline;
+    }
+}
+
+
+/* Max Width 768px */
+
+@media screen and (max-width: 768px) {
+
+    /* Navbar */
+
+    nav {
+        padding: 1.5rem 3.5rem;
+    }
+
+    .logo > h1 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    
+    .logo > h1 > span {
+        font-size: 2.5rem;
+    }
+
+    /* Hamburger */
+
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 4px;
+        margin: 4px 0;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 8px) rotate(-45deg);
+    }
+    
+    .change .bar2 {
+        opacity: 0;
+    }
+    
+    .change .bar3 {
+        transform: translate(0, -8px) rotate(45deg);
+    }
+
+    /* Side Navbar */
+
+    .side {
+        top: 10%;
+        right: 5%;
+        padding: 1.5rem 0;
+        border-radius: 10px;
+        border-top: 5px solid black;
+    }
+
+    .side-logo > h1 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        padding: 0 0 1rem 2rem;
+    }
+    
+    .side-logo > h1 > span {
+        font-size: 2.5rem;
+    }
+
+    .side-nav-item {
+        font-size: 0.8rem;
+        padding: 0.5rem 10rem 0.5rem 2rem;
+    }
+
+    .side-dropdown-content {
+        padding: 0.5rem 0 0.5rem 3rem;
+    }
+
+    .side-sub-item {
+        font-size: 0.8rem;
+        padding: 0.5rem 0;
+    }
+
+    /* Main */
+
+    .box {
+        padding: 0 1.5rem;
+    }
+
+    .text {
+        padding: 0 1.5rem;
+    }
+
+    .text h1 {
+        font-size: 2rem;
+    }
+
+    .text p {
+        padding-top: 0.5rem;
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+    }
+
+    .exp-btn {
+        padding-top: 1.5rem;
+    }
+
+    .exp-btn > a {
+        border-radius: 50px;
+        padding: 0.4rem 2rem;
+        font-size: 0.7rem;
+    }
+
+    /* Profile */
+
+    .profile > h3 {
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+    }
+
+    .detail-bondowoso{
+        padding: 1.25rem 0;
+    }
+    
+    .detail-banyuputih{
+        padding: 0 0 1.25rem 0;
+    }
+    
+    .detail-bondowoso > img, .detail-banyuputih > img {
+        width: 80%;
+    }
+
+    .line > img {
+        width: 100.2%;
+        padding: 1rem 0 0 0;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 1.25rem 0;
+    }
+    
+    .footer-logo > h1 {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+    
+    .footer-logo > h1 > span {
+        font-size: 2.25rem;
+    }
+    
+    .footer-kiri {
+        gap: 0.5rem;
+    }
+    
+    .footer-kiri p {
+        font-size: 0.75rem;
+    }
+    
+    .footer-center {
+        height: 9rem;
+        width: 0.15rem;
+    }
+    
+    .footer-kanan {
+        gap: 1rem;
+    }
+    
+    .tautan-penting > h3, .tautan-langsung > h3 {
+        font-size: 1rem;
+    }
+    
+    .link {
+        gap: 0.25rem;
+        padding-top: 0.35rem;
+    }
+    
+    .link-footer {
+        font-size: 0.8rem;
+    }
+
+    .footer-current {
+        color: #C3941B;
+        text-decoration: underline;
+    }
+
+    /* License */
+
+    .license {
+        padding: 0.5rem 0;
+    }
+
+    .license p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Max Width 651px */
+
+@media screen and (max-width: 651px) {
+
+    .box {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding: 0 0.5rem;
+    }
+
+    .text {
+        padding: 2rem 5rem 2rem 5.5rem;
+        order: 2;
+    }
+
+    .text h1 {
+        font-size: 2.25rem;
+    }
+
+    .text p {
+        padding-top: 0.5rem;
+        font-size: 0.65rem;
+        line-height: 0.9rem;
+    }
+
+    .exp-btn > a {
+        border-radius: 50px;
+        padding: 0.35rem 1.75rem;
+        font-size: 0.65rem;
+    }
+
+    .image {
+        gap: 0.5rem;
+        order: 1;
+    }
+
+    .image img {
+        width: 28%;
+    }
+
+    /* Profile */
+
+    .profile > h3 {
+        font-size: 1.25rem;
+        line-height: 3.15rem;
+    }
+
+    .detail-bondowoso{
+        padding: 1rem 0;
+    }
+    
+    .detail-banyuputih{
+        padding: 0 0 1rem 0;
+    }
+    
+    .detail-bondowoso > img, .detail-banyuputih > img {
+        width: 85%;
+    }
+
+    .line > img {
+        width: 100.2%;
+        padding: 1.25rem 0 0 0;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 1.25rem 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    
+    .footer-logo > h1 {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+    
+    .footer-logo > h1 > span {
+        font-size: 2.25rem;
+    }
+    
+    .footer-kiri {
+        gap: 0.5rem;
+    }
+    
+    .footer-kiri p {
+        font-size: 0.75rem;
+    }
+    
+    .footer-center {
+        height: 0.15rem;
+        width: 90%;
+        margin: 1rem 0;
+    }
+    
+    .footer-kanan {
+        gap: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+    
+    .tautan-penting > h3, .tautan-langsung > h3 {
+        font-size: 1rem;
+    }
+    
+    .link {
+        gap: 0.25rem;
+        padding-top: 0.35rem;
+    }
+    
+    .link-footer {
+        font-size: 0.8rem;
+    }
+
+    .footer-current {
+        color: #C3941B;
+        text-decoration: underline;
+    }
+}
+
+
+/* Max Width 480px */
+
+@media screen and (max-width: 480px) {
+
+    /* Hero */
+
+    .hero {
+        height: 100vh;
+    }
+
+    /* Navbar */
+
+    nav {
+        padding: 1.25rem 2.5rem;
+    }
+
+    .logo > h1 {
+        font-size: 1.15rem;
+        line-height: 1.15rem;
+    }
+    
+    .logo > h1 > span {
+        font-size: 2.15rem;
+    }
+
+    /* Hamburger */
+
+    .bar1, .bar2, .bar3 {
+        width: 30px;
+        height: 4px;
+        margin: 3px 0;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 7.5px) rotate(-45deg);
+    }
+    
+    .change .bar2 {
+        opacity: 0;
+    }
+    
+    .change .bar3 {
+        transform: translate(0, -7.5px) rotate(45deg);
+    }
+
+    /* Side Navbar */
+
+    .side {
+        top: 8%;
+        right: 5%;
+        padding: 1.25rem 0;
+        border-radius: 10px;
+        border-top: 5px solid black;
+    }
+
+    .side-logo > h1 {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+        padding: 0 0 1rem 1.75rem;
+    }
+    
+    .side-logo > h1 > span {
+        font-size: 2.25rem;
+    }
+
+    .side-nav-item {
+        font-size: 0.75rem;
+        padding: 0.45rem 8rem 0.45rem 1.75rem;
+    }
+
+    .side-dropdown-content {
+        padding: 0.45rem 0 0.45rem 2.5rem;
+    }
+
+    .side-sub-item {
+        font-size: 0.75rem;
+        padding: 0.45rem 0;
+    }
+
+    /* Main */
+
+    .box {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding: 0 1rem;
+    }
+
+    .text {
+        padding: 1.5rem 3rem;
+        order: 2;
+    }
+
+    .text h1 {
+        font-size: 1.75rem;
+    }
+
+    .text p {
+        padding-top: 0.5rem;
+        font-size: 0.6rem;
+        line-height: 0.75rem;
+    }
+
+    .exp-btn {
+        padding-top: 1.5rem;
+    }
+
+    .exp-btn > a {
+        border-radius: 50px;
+        padding: 0.35rem 1.75rem;
+        font-size: 0.6rem;
+    }
+
+    .image {
+        gap: 0.5rem;
+        order: 1;
+    }
+
+    /* Profile */
+
+    .profile > h3 {
+        font-size: 1rem;
+        line-height: 3rem;
+    }
+
+    .detail-bondowoso{
+        padding: 0.5rem 0;
+    }
+    
+    .detail-banyuputih{
+        padding: 0 0 0.5rem 0;
+    }
+    
+    .detail-bondowoso > img, .detail-banyuputih > img {
+        width: 90%;
+    }
+
+    .line > img {
+        width: 100.3%;
+        padding: 1.25rem 0 0 0;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 1.25rem 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    
+    .footer-logo > h1 {
+        font-size: 1.15rem;
+        line-height: 1.15rem;
+    }
+    
+    .footer-logo > h1 > span {
+        font-size: 2.15rem;
+    }
+    
+    .footer-kiri {
+        gap: 0.5rem;
+    }
+    
+    .footer-kiri p {
+        font-size: 0.7rem;
+    }
+    
+    .footer-center {
+        height: 0.15rem;
+        width: 95%;
+        margin: 1rem 0;
+    }
+    
+    .footer-kanan {
+        gap: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+    
+    .tautan-penting > h3, .tautan-langsung > h3 {
+        font-size: 0.9rem;
+    }
+    
+    .link {
+        gap: 0.3rem;
+        padding-top: 0.4rem;
+    }
+    
+    .link-footer {
+        font-size: 0.7rem;
+    }
+
+    .footer-current {
+        color: #C3941B;
+        text-decoration: underline;
+    }
+
+    /* License */
+
+    .license {
+        padding: 0.4rem 0;
+    }
+
+    .license p {
+        font-size: 0.7rem;
+    }
+}
+
+
+/* Max Width 380px */
+
+@media screen and (max-width: 380px) {
+
+    /* Hero */
+
+    .hero {
+        height: 100vh;
+    }
+
+    /* Navbar */
+
+    nav {
+        padding: 1.15rem 1.5rem;
+    }
+
+    /* Main */
+
+    .box {
+        padding: 0 0.5rem;
+    }
+
+    .text {
+        padding: 1.5rem 2rem;
+    }
+
+    /* Profile */
+
+    .profile > h3 {
+        font-size: 0.8rem;
+        line-height: 2.5rem;
+    }
+
+    .detail-bondowoso{
+        padding: 0.25rem 0;
+    }
+    
+    .detail-banyuputih{
+        padding: 0 0 0.25rem 0;
+    }
+    
+    .detail-bondowoso > img, .detail-banyuputih > img {
+        width: 95%;
+    }
+
+    .line > img {
+        width: 100.4%;
+        padding: 1rem 0 0 0;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 1.25rem 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    
+    .footer-logo > h1 {
+        font-size: 1.15rem;
+        line-height: 1.15rem;
+    }
+    
+    .footer-logo > h1 > span {
+        font-size: 2.15rem;
+    }
+    
+    .footer-kiri {
+        gap: 0.5rem;
+    }
+    
+    .footer-kiri p {
+        font-size: 0.6rem;
+    }
+    
+    .footer-center {
+        height: 0.15rem;
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    .footer-kanan {
+        gap: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    .tautan-penting > h3, .tautan-langsung > h3 {
+        font-size: 0.8rem;
+    }
+    
+    .link {
+        gap: 0.3rem;
+        padding-top: 0.4rem;
+    }
+    
+    .link-footer {
+        font-size: 0.65rem;
+    }
+
+    .footer-current {
+        color: #C3941B;
+        text-decoration: underline;
+    }
+
+    /* License */
+
+    .license {
+        padding: 0.3rem 0;
+    }
+
+    .license p {
+        font-size: 0.6rem;
+    }
+}

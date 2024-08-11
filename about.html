@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/about.css">
+  <title>About</title> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orienta&display=swap" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inder&family=Montserrat+Subrayada:wght@400;700&family=Oxanium:wght@200..800&family=Palanquin+Dark:wght@400;500;600;700&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hero">
+
+    <!-- Navbar --> 
+    <nav>
+      <div class="logo">
+          <h1><span>G</span>LOWING</h1>
+      </div>
+      <div class="navbar">
+          <a class="nav-item" href="./index.html">Home</a>
+          <a class="nav-item" href="./exp.html">Explore</a>
+          <div class="dropdown">
+              <a class="nav-item dropbtn" href="#">
+                  Publikasi
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg>
+              </a>
+              <div class="dropdown-content">
+                  <a class="sub-item" href="#">Homestay</a>
+                  <a class="sub-item" href="#">Wisata Kuliner</a>
+                  <a class="sub-item" href="#">UMKM</a>
+              </div>
+          </div>
+          <a class="nav-item" href="./berita.html">Berita</a>
+          <a class="nav-item current" href="./about.html">About</a>
+      </div>
+      <!-- Hamburger Button -->
+      <div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+      </div>
+      <!-- Side Navbar -->
+      <div class="side">
+          <div class="side-logo">
+              <h1><span>G</span>LOWING</h1>
+          </div>
+          <a class="side-nav-item" href="./index.html">Home</a>
+          <a class="side-nav-item" href="./exp.html">Explore</a>
+          <div class="side-dropdown">
+              <a class="side-nav-item side-dropbtn" href="#" onclick="subFunction()">
+                  Publikasi
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg>
+              </a>
+              <div class="side-dropdown-content">
+                  <a class="side-sub-item" href="#">Homestay</a>
+                  <a class="side-sub-item" href="#">Wisata Kuliner</a>
+                  <a class="side-sub-item" href="#">UMKM</a>
+              </div>
+          </div>
+          <a class="side-nav-item" href="./berita.html">Berita</a>
+          <a class="side-nav-item" href="./about.html">About</a>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="main">
+      <h1>ABOUT US</h1>
+      <h3>Produk wisata “GLOWING” merupakan sebuah website yang memuat informasi terkait wisata yang ada di Desa Banyuputih, Kecamatan Wringin, Kabupaten Bondowoso. Produk wisata sejarah yang digagas ialah wisata sejarah dan budaya. Dalam wisata sejarah akan menunjukkan nilai historis dari peninggalan Megalitikum berupa Menhir, sedangkan wisata budaya mengangkat salah satu kesenian tradisional di Desa Banyuputih, yakni kesenian ketipung. Nantinya, produk wisata “GLOWING” akan dijadikan trip paket wisata untuk mewujudkan Desa Banyuputih sebagai desa mandiri wisata yang mempunyai branding unggul serta dapat bersaing dengan wilayah lain. Dengan itu, maka diharapkan perekonomian di Desa Banyuputih dapat meningkat dan mampu mewujudkan Sustainable Development Goals Desa khususnya poin ke-8 yaitu pertumbuhan ekonomi desa merata.</h3>
+    </div>
+  </div>
+
+  <!-- Line Element -->
+  <div class="line-element">
+    <img src="./asset/line-element.png" alt="">
+  </div>
+
+  <!-- Visi Misi -->
+  <div class="visi-misi">
+    <div class="visi">
+      <h3>VISI</h3>
+      <div class="container-visi">
+        <p>Menjadikan Desa Wisata Banyuputih sebagai desa wisata unggulan di Jawa Timur yang berkelanjutan.</p>
+      </div>
+    </div>
+    <div class="misi">
+      <h3>MISI</h3>
+      <ol type="1" start="1" class="container-misi">
+        <li>Meningkatkan potensi dan daya tarik wisata Desa Banyuputih melalui pengembangan infrastruktur, produk wisata, dan sumber daya manusia.</li>
+        <li>Meningkatkan kesadaran dan partisipasi masyarakat dalam pengembangan desa wisata.</li>
+        <li>Membangun kerjasama dan kolaborasi dengan berbagai pihak untuk memajukan Desa Wisata Banyuputih.</li>
+        <li>Memperomosikan Desa Wisata Banyuputih ke pasar domestik dan internasional.</li>
+        <li>Menjaga kelestarian alam dan budaya Desa Wisata Banyuputih.</li>
+        <li>Meningkatkan kesejahteraan masyarakat Desa Banyuputih melalui pengembangan ekonomi desa wisata.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="line">
+    <img src="./asset/Top.svg" alt="">
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-kiri">
+      <div class="footer-logo">
+        <h1><span>G</span>LOWING</h1>
+      </div>
+      <p class="forum">POKDARWIS: Kelompok Sadar Wisata dan Forum Pemuda Desa Banyuputih</p>
+      <p class="address">
+        Jl. Banyuputih No. 13 RT 08 RW 03, Desa Banyuputih <br> 
+        Kec. Wringin, Kab. Bondowoso <br>  
+        Jawa Timur 68252 Indonesia
+      </p>
+      <div class="contact">
+        <p class="whatsapp">WhatsApp: 08</p>
+        <p class="email">Email: admin@bondowosokab.go.id</p>
+        <p class="instagram">Instagram: @banyuputih_</p>
+      </div>
+    </div>
+    <div class="footer-center"></div>
+    <div class="footer-kanan">
+      <div class="tautan-penting">
+        <h3>Tautan Penting</h3>
+        <div class="link">
+          <a href="./index.html" class="link-footer">Tentang Desa Banyuputih</a>
+          <a href="./berita.html" class="link-footer">Berita</a>
+          <a href="#" class="link-footer">FAQ</a>
+        </div>
+      </div>
+      <div class="tautan-langsung">
+        <h3>Tautan Langsung</h3>
+        <div class="link">
+          <a href="./exp.html" class="link-footer">Explore</a>
+          <a href="#" class="link-footer">UMKM</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- License -->
+
+  <div class="license">
+    <p>&copy;</p>
+    <p>2024 KKN UMD UNEJ. All Right</p>
+  </div>
+
+
+  <script src="./js/about.js"></script>
+</body>
+</html>

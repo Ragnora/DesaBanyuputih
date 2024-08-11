@@ -1,0 +1,86 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: white;
+  position: relative;
+}
+
+.footer-left {
+  max-width: 50%;
+}
+
+.footer-left .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #006400; /* Dark green color */
+}
+
+.footer-left p, .footer-left address {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.footer-left address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.footer-left a {
+  color: #006400; /* Same dark green color */
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: space-between;
+  max-width: 40%;
+  position: relative;
+  padding-left: 2rem; /* Padding to avoid text sticking to the line */
+}
+
+.footer-right::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: -1rem;
+  width: 1px;
+  background-color: #006400; /* Dark green color */
+}
+
+.links {
+  margin-left: 2rem;
+}
+
+.links h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #006400; /* Dark green color */
+  margin-bottom: 1rem;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.links ul li a {
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.links ul li a:hover {
+  color: #FFD700; /* Gold color */
+  text-decoration: underline;
+}

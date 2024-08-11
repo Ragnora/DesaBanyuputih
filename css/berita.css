@@ -1,0 +1,687 @@
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body { 
+  overflow-x: hidden;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+}
+
+
+.logo > h1 {
+  font-family: "Palanquin Dark", sans-serif;
+  font-size: 2rem;
+  color: #1A4D2E;
+  line-height: 2rem;
+}
+
+.logo > h1 > span {
+  font-size: 3rem;
+}
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  gap: 4rem;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #1A4D2E;
+  font-family: "Orienta", sans-serif;
+  font-size: 1.15rem;
+}
+
+.nav-item:hover {
+  color: #C3941B;
+  text-decoration: underline;
+}
+
+.current {
+  color: #C3941B;
+  text-decoration: underline #C3941B;
+}
+
+.dropbtn {
+  display: flex;
+  position: relative;
+}
+
+.dropbtn > svg {
+  position: absolute;
+  top: 20%;
+  left: 105%;
+}
+
+.dropdown {
+  margin-right: 0.25rem;
+}
+
+.dropdown-content{
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  padding: 1rem 0;
+  border-radius: 5px;
+  border-top: 5px solid black;
+}
+
+.sub-item {
+  text-decoration: none;
+  color: #1A4D2E;
+  font-family: "Orienta", sans-serif;
+  font-size: 1.15rem;
+  padding: 0.5rem 1rem;
+}
+
+.sub-item:hover {
+  color: #C3941B;
+}
+
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+}
+
+/* Hamburger */
+.container {
+  display: none;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #1A4D2E;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* Side Navbar */
+.side {
+  position: absolute;
+  z-index: 10;
+  top: 8%;
+  right: 5%;
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  padding: 1.5rem 0;
+  border-radius: 10px;
+  border-top: 6px solid black;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.side-show {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.side-logo > h1 {
+  font-family: "Palanquin Dark", sans-serif;
+  font-size: 2rem;
+  color: #1A4D2E;
+  line-height: 2rem;
+  padding: 0 0 1rem 2rem;
+  text-decoration: underline #C3941B;
+}
+
+.side-logo > h1 > span {
+  font-size: 3rem;
+}
+
+.side-nav-item {
+  font-family: "Orienta", sans-serif;
+  font-weight: 600;
+  color: #1A4D2E;
+  text-decoration: none;
+  padding: 0.5rem 12rem 0.5rem 2rem;
+}
+
+.side-nav-item:active {
+  color: #C3941B;
+}
+
+.side-nav-item:focus {
+  color: #C3941B;
+}
+
+.side-dropbtn {
+  display: flex;
+  position: relative;
+}
+
+.side-dropbtn > svg {
+  position: absolute;
+  left: 85%;
+}
+
+.side-dropdown-content {
+  display: none;
+  flex-direction: column;
+  padding: 0.5rem 0 0.5rem 3rem;
+  background-color: whitesmoke;
+}
+
+.side-sub-show {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-sub-item {
+  font-family: "Orienta", sans-serif;
+  color: #1A4D2E;
+  text-decoration: none;
+  padding: 0.5rem 0;
+}
+
+.side-sub-item:active {
+  color: #C3941B;
+}
+
+.side-sub-item:focus {
+  color: #C3941B;
+}
+
+/* Berita */
+
+.berita {
+  margin: 2rem 0;
+  border-top: 1rem solid #1A4D2E;
+  border-bottom: 1rem solid white;
+  overflow-x: hidden;
+}
+
+.container-berita {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-top: 1rem solid white;
+  border-bottom: 1rem solid white;
+}
+
+.deskripsi {
+  background-color: #1A4D2E;
+  color: white;
+  border-right: 1rem solid white;
+  grid-column: span 3 / span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.deskripsi > h3 {
+  font-family: "Oxanium", sans-serif;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.deskripsi > p {
+  font-family: "Orienta", sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 4rem;
+}
+
+.deskripsi > a {
+  background-color: white;
+  color: #1A4D2E;
+  width: fit-content;
+  font-family: "Passion One", sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 1.15rem 2.5rem;
+  border-radius: 20px;
+}
+
+.container-berita > img {
+  height: 100%;
+  width: 130%;
+  grid-column: span 4 / span 4;
+}
+
+
+/* Screen max-1280px */
+
+@media screen and (max-width: 1280px) {
+
+  /* Berita */
+
+  .deskripsi > h3 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .deskripsi > p {
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+  }
+  
+  .deskripsi > a {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+  }
+}
+
+
+/* Screen max-1024px */
+
+@media screen and (max-width: 1024px) {
+  
+  /* Navbar */
+
+  .navbar {
+    gap: 3rem;
+  }
+
+  /* Berita */
+
+  .deskripsi > h3 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .deskripsi > p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .deskripsi > a {
+    font-size: 1.15rem;
+    padding: 0.8rem 1.75rem;
+    border-radius: 10px;
+  }
+
+  .container-berita > img {
+    height: 100%;
+    width: 130%;
+  }
+}
+
+
+/* Screen max-992px */
+
+@media screen and (max-width: 992px) {
+
+  /* Navbar */
+
+  .logo > h1 {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+  }
+
+  .logo > h1 > span {
+    font-size: 2.75rem;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  /* Hamburger */
+
+  .container {
+    display: inline-block;
+  }
+
+  /* Berita */
+
+  .berita {
+    margin-top: 1rem;
+    border-top: 1rem solid #1A4D2E;
+    border-bottom: 1rem solid #1A4D2E;
+  }
+
+  .container-berita {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    border: 1rem solid white;
+  }
+  
+  .deskripsi {
+    border: none;
+    padding: 2rem 4rem;
+    order: 2;
+  }
+  
+  .deskripsi > h3 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .deskripsi > p {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+  }
+  
+  .deskripsi > a {
+    font-size: 1.5rem;
+    padding: 1.15rem 2.5rem;
+    border-radius: 20px;
+  }
+  
+  .container-berita > img {
+    height: 100%;
+    width: 100%;
+    order: 1;
+  }
+}
+
+
+/* Screen max-768px */
+
+@media screen and (max-width: 768px) {
+
+  /* Navbar */
+
+  nav {
+    padding: 1.5rem 3.5rem;
+  }
+
+  .logo > h1 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .logo > h1 > span {
+    font-size: 2.5rem;
+  }
+
+  /* Hamburger */
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 4px;
+    margin: 4px 0;
+  }
+
+  .change .bar1 {
+    transform: translate(0, 8px) rotate(-45deg);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    transform: translate(0, -8px) rotate(45deg);
+  }
+
+  /* Side Navbar */
+
+  .side {
+    top: 10%;
+    right: 5%;
+    padding: 1.5rem 0;
+    border-radius: 10px;
+    border-top: 5px solid black;
+  }
+
+  .side-logo > h1 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 0 0 1rem 2rem;
+  }
+
+  .side-logo > h1 > span {
+    font-size: 2.5rem;
+  }
+
+  .side-nav-item {
+    font-size: 0.8rem;
+    padding: 0.5rem 10rem 0.5rem 2rem;
+  }
+
+  .side-dropdown-content {
+    padding: 0.5rem 0 0.5rem 3rem;
+  }
+
+  .side-sub-item {
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+  }
+
+  /* Berita */
+
+  .berita {
+    margin-top: 1rem;
+    border-top: 0.8rem solid #1A4D2E;
+    border-bottom: 0.8rem solid #1A4D2E;
+  }
+
+  .container-berita {
+    border: 0.8rem solid white;
+  }
+  
+  .deskripsi {
+    padding: 2rem 3.5rem;
+    order: 2;
+  }
+  
+  .deskripsi > h3 {
+    font-size: 2rem;
+    line-height: 2.15rem;
+    margin-bottom: 1rem;
+  }
+  
+  .deskripsi > p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .deskripsi > a {
+    font-size: 1.15rem;
+    padding: 0.8rem 1.75rem;
+    border-radius: 10px;
+  }
+  
+  .container-berita > img {
+    height: 100%;
+    width: 100%;
+    order: 1;
+  }
+}
+
+
+/* Screen max-651px */
+
+@media screen and (max-width: 651px) {
+
+  /* Berita */
+
+  .deskripsi {
+    padding: 2rem 3rem;
+  }
+  
+  .deskripsi > h3 {
+    font-size: 1.65rem;
+    line-height: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .deskripsi > p {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+  }
+  
+  .deskripsi > a {
+    font-size: 1.15rem;
+    padding: 0.8rem 1.75rem;
+    border-radius: 10px;
+  }
+}
+
+
+/* Screen max-480px */
+
+@media screen and (max-width: 480px) {
+
+  /* Navbar */
+
+  nav {
+    padding: 1.25rem 2.5rem;
+  }
+
+  .logo > h1 {
+    font-size: 1.15rem;
+    line-height: 1.15rem;
+  }
+
+  .logo > h1 > span {
+    font-size: 2.15rem;
+  }
+
+  /* Hamburger */
+
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    margin: 3px 0;
+  }
+
+  .change .bar1 {
+    transform: translate(0, 7.5px) rotate(-45deg);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    transform: translate(0, -7.5px) rotate(45deg);
+  }
+
+  /* Side Navbar */
+
+  .side {
+    top: 8%;
+    right: 5%;
+    padding: 1.25rem 0;
+    border-radius: 10px;
+    border-top: 5px solid black;
+  }
+
+  .side-logo > h1 {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    padding: 0 0 1rem 1.75rem;
+  }
+
+  .side-logo > h1 > span {
+    font-size: 2.25rem;
+  }
+
+  .side-nav-item {
+    font-size: 0.75rem;
+    padding: 0.45rem 8rem 0.45rem 1.75rem;
+  }
+
+  .side-dropdown-content {
+    padding: 0.45rem 0 0.45rem 2.5rem;
+  }
+
+  .side-sub-item {
+    font-size: 0.75rem;
+    padding: 0.45rem 0;
+  }
+
+  /* Berita */
+
+  .berita {
+    margin-top: 0.75rem;
+    border-top: 0.5rem solid #1A4D2E;
+    border-bottom: 0.5rem solid #1A4D2E;
+  }
+
+  .container-berita {
+    border: 0.5rem solid white;
+  }
+
+  .deskripsi {
+    padding: 1.5rem 2.5rem;
+  }
+  
+  .deskripsi > h3 {
+    font-size: 1.35rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .deskripsi > p {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .deskripsi > a {
+    font-size: 1rem;
+    padding: 0.7rem 1.35rem;
+    border-radius: 10px;
+  }
+}
+
+
+/* Screen max-380px */
+
+@media screen and (max-width: 380px) {
+
+  /* Navbar */
+
+  nav {
+    padding: 1.15rem 1.5rem;
+  }
+
+  /* Berita */
+
+  .deskripsi {
+    padding: 1.5rem 2rem;
+  }
+  
+  .deskripsi > h3 {
+    font-size: 1.25rem;
+    line-height: 1.35rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .deskripsi > p {
+    font-size: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .deskripsi > a {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.25rem;
+    border-radius: 10px;
+  }
+}

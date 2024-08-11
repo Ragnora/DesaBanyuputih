@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/berita.css">
+    <title>Berita</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orienta&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inder&family=Montserrat+Subrayada:wght@400;700&family=Oxanium:wght@200..800&family=Palanquin+Dark:wght@400;500;600;700&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar --> 
+    <nav>
+        <div class="logo">
+            <h1><span>G</span>LOWING</h1>
+        </div>
+        <div class="navbar">
+            <a class="nav-item" href="./index.html">Home</a>
+            <a class="nav-item" href="./exp.html">Explore</a>
+            <div class="dropdown">
+                <a class="nav-item dropbtn" href="#">
+                    Publikasi
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                </a>
+                <div class="dropdown-content">
+                    <a class="sub-item" href="#">Homestay</a>
+                    <a class="sub-item" href="#">Wisata Kuliner</a>
+                    <a class="sub-item" href="#">UMKM</a>
+                </div>
+            </div>
+            <a class="nav-item" href="#">Berita</a>
+            <a class="nav-item current" href="./about.html">About</a>
+        </div>
+        <!-- Hamburger Button -->
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <!-- Side Navbar -->
+        <div class="side">
+            <div class="side-logo">
+                <h1><span>G</span>LOWING</h1>
+            </div>
+            <a class="side-nav-item" href="./index.html">Home</a>
+            <a class="side-nav-item" href="./exp.html">Explore</a>
+            <div class="side-dropdown">
+                <a class="side-nav-item side-dropbtn" href="#" onclick="subFunction()">
+                    Publikasi
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                </a>
+                <div class="side-dropdown-content">
+                    <a class="side-sub-item" href="#">Homestay</a>
+                    <a class="side-sub-item" href="#">Wisata Kuliner</a>
+                    <a class="side-sub-item" href="#">UMKM</a>
+                </div>
+            </div>
+            <a class="side-nav-item" href="#">Berita</a>
+            <a class="side-nav-item" href="./about.html">About</a>
+        </div>
+    </nav>
+
+    <!-- Berita -->
+    <div class="berita">
+        <div class="container-berita">
+        <div class="deskripsi">
+            <h3>Eksplor Desa Banyuputih Kabupaten Bondowoso, KKN UMD 157 Universitas Jember Siap Dukung Pengembangan Potensi Desa</h3>
+            <p>Secara geografis, Desa Banyuputih memiliki luas sekitar 3.013 km2 dan berbatasan dengan Desa Sumbercanting di sebelah utara, Desa Wringin di sebelah timur, Desa Glingseran di sebelah selatan dan di sebelah barat berbatasan dengan Desa Mojodungkul dan Desa Gunung Malang, Kecamatan Suboh, Kabupaten Situbondo. Desa Banyuputih memiliki potensi kesenian yang terkenal serta menjadi ikon di Desa Banyuputih ...</p>
+            <a href="https://www.kompasiana.com/kkn157banyuputih7450/66953b1c34777c39d7608e72/eksplor-desa-banyuputih-kab-bondowoso-kkn-umd-157-universitas-jember-siap-dukung-pengembangan-potensi-desa" target="_blank">LIHAT SELENGKAPNYA</a>
+        </div>
+        <img src="./asset/berita1.png" alt="">
+        </div>
+    </div>
+
+
+    <script src="./js/berita.js"></script>
+</body>
+</html>
