@@ -19,3 +19,14 @@ function subFunction() {
   const showSub = document.querySelector(".side-dropdown-content");
   showSub.classList.toggle("side-sub-show");
 }
+
+window.onscroll = function() {stickyNavbar()};
+var navbar = document.querySelector("nav");
+var sticky = navbar.offsetTop;
+function stickyNavbar() {
+  if (window.scrollY > sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
