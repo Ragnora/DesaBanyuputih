@@ -239,6 +239,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 5rem;
   height: 85vh;
 }
 
@@ -519,6 +520,7 @@ nav {
   /* Hero Section */
 
   .text {
+    margin-top: 4.5rem;
     height: 85vh;
   }
 
@@ -675,6 +677,7 @@ nav {
   /* Hero Section */
 
   .text {
+    margin-top: 4rem;
     height: 80vh;
   }
 
@@ -930,6 +933,7 @@ nav {
   }
 
   .text {
+    margin-top: 4rem;
     height: 70vh;
   }
 

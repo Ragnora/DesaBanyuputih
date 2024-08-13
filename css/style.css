@@ -234,11 +234,12 @@ nav {
 
 /* Main */
 
-.bg-home {
+.bg-home { 
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 5rem;
     height: 90vh;
 }
 
@@ -762,6 +763,10 @@ nav {
 
     /* Main */
 
+    .bg-home {
+        margin-top: 4rem;
+    }
+
     .box {
         padding: 0 1.5rem;
     }
@@ -1226,6 +1231,10 @@ nav {
     }
 
     /* Main */
+
+    .bg-home {
+        margin-top: 3,5rem;
+    }
 
     .box {
         padding: 0 0.5rem;

@@ -235,11 +235,12 @@ nav {
 
 .main {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
+  margin-top: 5rem;
   height: 80vh;
   padding: 0 15%;
 }
@@ -419,6 +420,7 @@ nav {
   /* Main */
 
   .main {
+    margin-top: 4.5rem;
     height: 85vh;
     padding: 0 12%;
   }
@@ -664,6 +666,7 @@ nav {
   /* Main */
 
   .main {
+    margin-top: 4rem;
     height: 85vh;
     padding: 0 12%;
   }
@@ -914,6 +917,7 @@ nav {
   /* Main */
 
   .main {
+    margin-top: 3.5rem;
     height: 85vh;
     padding: 0 12%;
   }
@@ -1048,6 +1052,7 @@ nav {
   /* Main */
 
   .main {
+    margin-top: 3.25rem;
     height: 85vh;
     padding: 0 10%;
   }
